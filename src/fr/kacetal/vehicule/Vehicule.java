@@ -1,5 +1,6 @@
 package fr.kacetal.vehicule;
 
+import java.text.DecimalFormat;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -36,18 +37,22 @@ public abstract class Vehicule {
 		for (Option option : options) {
 			prix += option.getPrix();
 		}
+		prix += moteur.getPrix();
 		return prix;
 	}
 
 	@Override
 	public String toString() {
 		
+		DecimalFormat prixFormat = new DecimalFormat("#########.00");
+		String prixString = prixFormat.format(getPrix());
+		
 		StringBuilder sb = new StringBuilder();
 		sb.append("Voiture ").append(marque);
 		sb.append(" : ").append(nom);
 		sb.append(" ").append(moteur);
 		sb.append(" ").append(options);
-		sb.append(" d'une valeur totale de " + getPrix() + "\\u20AC");
+		sb.append(" d'une valeur totale de " + prixString + "\u20AC");
 		
 		return sb.toString();
 	}
