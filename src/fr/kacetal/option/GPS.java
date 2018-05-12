@@ -18,6 +18,6 @@ public class GPS implements Option {
 
 	@Override
 	public String toString() {
-		return "GPS [name=" + name + ", prix=" + prix + "\\u20AC" + "]";
+		return name + " (" + prix + "\\u20AC" + ")";
 	}
 }

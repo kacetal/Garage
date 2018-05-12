@@ -7,7 +7,7 @@ public class BarreDeToit implements Option {
 	private final Double prix;
 	
 	public BarreDeToit() {
-		name = "BarreDeToit";
+		name = "Barre de toit";
 		prix = 29.9;
 	}
 
@@ -18,6 +18,6 @@ public class BarreDeToit implements Option {
 
 	@Override
 	public String toString() {
-		return "SiegeChauffant [name=" + name + ", prix=" + prix + "\\u20AC" + "]";
+		return name + " (" + prix + "\\u20AC" + ")";
 	}
 }

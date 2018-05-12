@@ -7,7 +7,7 @@ public class SiegeChauffant implements Option {
 	private final Double prix;
 	
 	public SiegeChauffant() {
-		name = "SiegeChauffant";
+		name = "Siège chauffant";
 		prix = 562.9;
 	}
 
@@ -18,6 +18,6 @@ public class SiegeChauffant implements Option {
 
 	@Override
 	public String toString() {
-		return "SiegeChauffant [name=" + name + ", prix=" + prix + "\\u20AC" + "]";
+		return name + " (" + prix + "\\u20AC" + ")";
 	}
 }

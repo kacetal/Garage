@@ -18,6 +18,6 @@ public class Climatisation implements Option {
 
 	@Override
 	public String toString() {
-		return "SiegeChauffant [name=" + name + ", prix=" + prix + "\\u20AC" + "]";
+		return name + " (" + prix + "\\u20AC" + ")";
 	}
 }

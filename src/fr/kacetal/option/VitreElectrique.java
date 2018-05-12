@@ -7,7 +7,7 @@ public class VitreElectrique implements Option {
 	private final Double prix;
 	
 	public VitreElectrique() {
-		name = "VitreElectrique";
+		name = "Vitre electrique";
 		prix = 212.35;
 	}
 
@@ -18,6 +18,6 @@ public class VitreElectrique implements Option {
 
 	@Override
 	public String toString() {
-		return "SiegeChauffant [name=" + name + ", prix=" + prix + "\\u20AC" + "]";
+		return name + " (" + prix + "\\u20AC" + ")";
 	}
 }
