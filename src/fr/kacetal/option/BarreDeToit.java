@@ -18,6 +18,6 @@ public class BarreDeToit implements Option {
 
 	@Override
 	public String toString() {
-		return name + " (" + prix + "\\u20AC" + ")";
+		return name + " (" + prix + "\u20AC" + ")";
 	}
 }
