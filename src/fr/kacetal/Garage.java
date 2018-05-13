@@ -1,18 +1,18 @@
 package fr.kacetal;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 import fr.kacetal.vehicule.Vehicule;
+
 
 public class Garage {
 	
 	private Set<Vehicule> voitures = new LinkedHashSet<>();
 	
-	public void add(Vehicule vehicule) {
-		voitures.add(vehicule);
-	}
-
 	@Override
 	public String toString() {
 		
@@ -34,6 +34,28 @@ public class Garage {
 	}
 
 	public void addVoiture(Vehicule vehicule) {
+		createFile();
 		voitures.add(vehicule);
 	}
+	
+	private void createFile() {
+		try {
+			
+			Path mkDir = Paths.get("./files");
+			
+			Path mkFile = Paths.get("./files/Garage.txt");
+			
+			if (!Files.isDirectory(mkDir)) {
+				Files.createDirectory(mkDir);
+			}
+			
+			if (!Files.exists(mkFile)) {
+				Files.createFile(mkFile);
+			}			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		 
+	}	
 }
