@@ -2,6 +2,7 @@ package fr.kacetal.option;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public abstract class Option implements Serializable {
 	
@@ -13,12 +14,12 @@ public abstract class Option implements Serializable {
 		
 	protected Option(String name, String prix) {
 		this.name = name;
-		this.prix = new BigDecimal(prix);
+		this.prix = new BigDecimal(prix).setScale(2, RoundingMode.HALF_UP);
 	}
 	
 	protected Option(String name, int prix) {
 		this.name = name;
-		this.prix = new BigDecimal(prix);
+		this.prix = new BigDecimal(prix).setScale(2, RoundingMode.HALF_UP);
 	}
 
 	public BigDecimal getPrix() {
