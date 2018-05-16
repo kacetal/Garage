@@ -1,23 +1,10 @@
 package fr.kacetal.option;
 
-public class VitreElectrique implements Option {
+public class VitreElectrique extends Option {
 	
-	private final String name;
-	
-	private final Double prix;
-	
+	private static final long serialVersionUID = -1141287169673421198L;
+
 	public VitreElectrique() {
-		name = "Vitre electrique";
-		prix = 212.35;
-	}
-
-	@Override
-	public Double getPrix() {
-		return prix;
-	}
-
-	@Override
-	public String toString() {
-		return name + " (" + prix + "\u20AC" + ")";
+		super("Vitre electrique", "212.35");
 	}
 }

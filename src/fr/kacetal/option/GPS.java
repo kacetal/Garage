@@ -1,23 +1,10 @@
 package fr.kacetal.option;
 
-public class GPS implements Option {
-	
-	private final String name;
-	
-	private final Double prix;
-	
-	public GPS() {
-		name = "GPS";
-		prix = 113.5;
-	}
-	
-	@Override
-	public Double getPrix() {
-		return prix;
-	}
+public class GPS extends Option {
 
-	@Override
-	public String toString() {
-		return name + " (" + prix + "\u20AC" + ")";
+	private static final long serialVersionUID = 2417753918294921230L;
+
+	public GPS() {
+		super("GPS", "113.5");
 	}
 }

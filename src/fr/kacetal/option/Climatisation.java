@@ -1,23 +1,10 @@
 package fr.kacetal.option;
 
-public class Climatisation implements Option {
+public class Climatisation extends Option {
 	
-	private final String name;
-	
-	private final Double prix;
-	
+	private static final long serialVersionUID = 5887384283512623531L;
+
 	public Climatisation() {
-		name = "Climatisation";
-		prix = 347.3;
-	}
-
-	@Override
-	public Double getPrix() {
-		return prix;
-	}
-
-	@Override
-	public String toString() {
-		return name + " (" + prix + "\u20AC" + ")";
+		super("Climatisation", "347.3");
 	}
 }
