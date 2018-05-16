@@ -11,6 +11,10 @@ public abstract class Option implements Serializable {
 	private final String name;
 	
 	private final BigDecimal prix;
+	
+	protected Option() {
+		this("", "0.00");
+	}
 		
 	protected Option(String name, String prix) {
 		this.name = name;

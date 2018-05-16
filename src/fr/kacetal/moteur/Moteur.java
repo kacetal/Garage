@@ -13,15 +13,19 @@ public abstract class Moteur implements Serializable {
 	private final String cylindre;
 	
 	private final BigDecimal prix;
+	
+	protected Moteur() {
+		this("", "0.00");
+	}
+	
+	protected Moteur(String cylindre, String prix) {
+		this(cylindre, prix, null);		
+	}
 
-	public Moteur(String cylindre, String prix, TypeMoteur type) {
+	protected Moteur(String cylindre, String prix, TypeMoteur type) {
 		this.cylindre = cylindre;
 		this.prix = new BigDecimal(prix).setScale(2, RoundingMode.HALF_UP);
 		this.type = type;
-	}
-	
-	public Moteur(String cylindre, String prix) {
-		this(cylindre, prix, null);		
 	}
 
 	public BigDecimal getPrix() {
