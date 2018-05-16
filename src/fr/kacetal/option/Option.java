@@ -12,7 +12,7 @@ public abstract class Option implements Serializable {
 	
 	private final BigDecimal prix;
 	
-	protected Option() {
+	public Option() {
 		this("", "0.00");
 	}
 		

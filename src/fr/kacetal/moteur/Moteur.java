@@ -14,7 +14,7 @@ public abstract class Moteur implements Serializable {
 	
 	private final BigDecimal prix;
 	
-	protected Moteur() {
+	public Moteur() {
 		this("", "0.00");
 	}
 	
