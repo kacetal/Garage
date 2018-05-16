@@ -30,7 +30,7 @@ public abstract class Moteur implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Moteur " + type + " " + cylindre + " (" + prix + "\u20AC)";
+		return "Moteur " + type + " " + cylindre + " (" + prix.toString() + "\u20AC)";
 	}
 
 	/* (non-Javadoc)
